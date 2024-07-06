@@ -5,7 +5,6 @@ from reportlab.pdfgen import canvas
 
 
 def convert_images_to_pdf(input_folder):
-    #for processing images within subdirectories
     for root, dirs, files in os.walk(input_folder):
         for directory in dirs:
             folder_path = os.path.join(root, directory)
@@ -23,7 +22,6 @@ def convert_images_to_pdf(input_folder):
                 c.save()
                 print(f"PDF create successfully at {output_pdf_path}")
 
-    #for processing images directly within the input directory
     image_files = sorted([f for f in os.listdir(input_folder) if f.lower().endswith('.jpg')])
     if image_files:
         output_pdf_path = os.path.join(input_folder, 'output.pdf')
