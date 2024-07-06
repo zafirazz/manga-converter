@@ -2,9 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Manga converter for e-book</title>
+    <script src="/static/script.js"></script>
 </head>
 <body>
-
+    <h1>Convert zip file of manga chapters into pdf file for your e-book </h1>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".zip" required />
+    </form>
+    <a id="downloadLink" style="display: none;">Download PDF</a>
 </body>
 </html>
