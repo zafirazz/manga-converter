@@ -6,5 +6,3 @@ Buttt kindle does not support JPG/PNG. My desire to read manga only on kindle wo
 
 Wait...I am a cs student. Aaah I should have thought of it before.
 
-# Yeah, this whole text is basically about a very easy dum dum code for converting images. I am bored, I have midterms coming up and this is what i do.
-What am I even doing 
