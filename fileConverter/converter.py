@@ -29,7 +29,7 @@ def convert_images_to_pdf(input_folder):
                     c.save()
                     print(f"PDF created successfully at {output_pdf_path}")
 
-        root_image_files = sorted([f for f in os.listdir(input_folder) if f.lower().endswith(('.jpg', '.png'))])
+        root_image_files = sorted([f for f in os.listdir(input_folder) if f.lower().endswith(('.jpg', '.png', '.jpeg'))])
         if root_image_files:
             output_pdf_path = os.path.join(input_folder, f'{directory}.pdf')
             c = canvas.Canvas(output_pdf_path, pagesize=letter)
@@ -55,4 +55,4 @@ def convert_images_to_pdf(input_folder):
     except FileNotFoundError as ex:
             print(ex)
 
-convert_images_to_pdf('/home/marbelle/Downloads/jujutsu-kaisen_c141 _ c150')
+convert_images_to_pdf('/home/marbelle/manga-converter/static/files')

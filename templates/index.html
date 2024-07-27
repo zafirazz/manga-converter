@@ -1,90 +1,63 @@
-{#<!DOCTYPE html>#}
-{#<html lang="en">#}
-{#<head>#}
-{#    <meta charset="UTF-8">#}
-{#    <meta http-equiv="X-UA-Compatible" content="IE=edge">#}
-{#    <meta name="viewport" content="width=device-width, initial-scale=1.0">#}
-{#    <title>Home</title>#}
-{#</head>#}
-{#<body>#}
-{#    <h1>Manga Converter for e-book</h1>#}
-{##}
-{#    <form method='POST' enctype='multipart/form-data'>#}
-{#        {{form.hidden_tag()}}#}
-{#        {{form.file()}}#}
-{#        {{form.submit()}}#}
-{#    </form>#}
-{#</body>#}
-{#</html>#}
-
-{##}
-{#<!doctype html>#}
-{#<html lang="en">#}
-{#<head>#}
-{#    <meta charset="utf-8">#}
-{#    <title>Manga Converter for e-book</title>#}
-{#    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">#}
-{#</head>#}
-{#<body>#}
-{#<div class="container mt-5">#}
-{#    <h1>Upload File</h1>#}
-{#    <form method="POST" enctype="multipart/form-data">#}
-{#        {{ form.hidden_tag() }}#}
-{#        <div class="mb-3">#}
-{#            {{ form.file.label }}<br>#}
-{#            {{ form.file(class="form-control") }}#}
-{#        </div>#}
-{#        <div class="mb-3">#}
-{#            {{ form.submit(class="btn btn-primary") }}#}
-{#        </div>#}
-{#    </form>#}
-{#</div>#}
-{#</body>#}
-{#</html>#}
-
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Upload File</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MangaZip | Upload File</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-<div class="container mt-5">
-    <h1>Upload File</h1>
-    {% with messages = get_flashed_messages(with_categories=true) %}
-        {% if messages %}
-            <div class="alert-container">
-                {% for category, message in messages %}
-                    <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
-                        {{ message }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                {% endfor %}
+    <div class="container">
+        <header class="d-flex justify-content-between align-items-center py-3">
+            <div class="branding">
+                <h1><span class="highlight">Manga</span>Zip</h1>
             </div>
-        {% endif %}
-    {% endwith %}
-    <form method="POST" enctype="multipart/form-data">
-        {{ form.hidden_tag() }}
-        <div class="mb-3">
-            {{ form.file.label }}<br>
-            {{ form.file(class="form-control") }}
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Upload Zip file</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tutorial.html">How to use</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="upload-container">
+            <div class="form-container">
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        <div class="alert-container">
+                            {% for category, message in messages %}
+                                <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                                    {{ message }}
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                {% endwith %}
+                <form method="POST" enctype="multipart/form-data">
+                    {{ form.hidden_tag() }}
+                    <div class="mb-3">
+                        {{ form.file.label(class="form-label") }}
+                        {{ form.file(class="form-control") }}
+                    </div>
+                    <div class="d-grid gap-2 d-md-block text-center">
+                        {{ form.submit(class="btn btn-primary btn-sm") }}
+                        <button type="reset" class="btn btn-danger btn-sm">Clear Queue</button>
+                    </div>
+                </form>
+            </div>
         </div>
-        <div class="mb-3">
-            {{ form.submit(class="btn btn-primary") }}
-        </div>
-    </form>
-</div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
-<script>
-    // Automatically close alerts after 5 seconds
-    setTimeout(function() {
-        let alerts = document.querySelectorAll('.alert');
-        alerts.forEach(alert => {
-            let alertInstance = new bootstrap.Alert(alert);
-            alertInstance.close();
-        });
-    }, 5000);
-</script>
+    </div>
+    <footer class="bg-light text-center py-3">
+        <p>&copy; 2024 Zafira, Abhijeet</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
+
+
