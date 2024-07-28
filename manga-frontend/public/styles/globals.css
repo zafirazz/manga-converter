@@ -1,0 +1,122 @@
+body {
+    font: 15px/1.5 Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: rgba(55, 18, 112, 0.9);
+    color: white;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: rgb(255, 187, 0) 3px solid;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header li {
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header #branding {
+    float: left;
+}
+
+header #branding h1 {
+    margin: 0;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header .highlight, header .current a {
+    color: rgb(255, 187, 0);
+    font-weight: bold;
+}
+
+header a:hover {
+    color: white;
+    font-weight: bold;
+}
+
+#showcase {
+    min-height: 400px;
+    background: url('../images/background.jpg') no-repeat 0 -400px;
+    text-align: center;
+    color: white;
+}
+
+#showcase h1 {
+    margin-top: 100px;
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+#main .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    min-height: calc(100vh - 140px);
+}
+
+#tutorial {
+    width: 50%;
+    padding: 20px;
+    background: rgba(55, 18, 112, 0.9);
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+#image {
+    width: 50%;
+    text-align: center;
+}
+
+#image img {
+    max-width: 100%;
+}
+
+.form-container {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    color: white;
+    background-color: rgba(55, 18, 112, 0.9);
+    text-align: center;
+    margin-top: auto;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+#main {
+    flex: 1;
+}
