@@ -1,4 +1,3 @@
-// src/pages/index.js
 import Layout from '../app/layout';
 import UploadForm from '../components/UploadForm';
 

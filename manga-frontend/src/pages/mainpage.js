@@ -1,4 +1,3 @@
-// src/pages/mainpage.js
 import Layout from '../app/layout';
 
 export default function MainPage() {
@@ -17,7 +16,7 @@ export default function MainPage() {
           </div>
         </aside>
         <div className="image-container">
-          <img src="/path/to/background.jpg" alt="Background" />
+          <img src="/home/marbelle/manga-converter/templates/background.png"/>
         </div>
       </div>
     </Layout>
