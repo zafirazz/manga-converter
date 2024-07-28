@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 
-export default function UploadForm() {
+function UploadForm() {
   const [file, setFile] = useState(null);
 
-  const handleFileChange = (e) => {
-    setFile(e.target.files[0]);
+  const handleFileChange = (event) => {
+    setFile(event.target.files[0]);
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = async (event) => {
+    event.preventDefault();
     const formData = new FormData();
     formData.append('file', file);
 
@@ -17,22 +17,19 @@ export default function UploadForm() {
         method: 'POST',
         body: formData,
       });
-
-      if (response.ok) {
-        alert('File uploaded successfully!');
-      } else {
-        const errorData = await response.json();
-        alert(`File upload failed: ${errorData.message}`);
-      }
+      const data = await response.json();
+      alert(data.message);
     } catch (error) {
-      alert(`File upload failed: ${error.message}`);
+      console.error('Error uploading file:', error);
     }
   };
 
   return (
     <form onSubmit={handleSubmit}>
-      <input type="file" onChange={handleFileChange} accept=".zip" />
+      <input type="file" onChange={handleFileChange} />
       <button type="submit">Upload</button>
     </form>
   );
 }
+
+export default UploadForm;

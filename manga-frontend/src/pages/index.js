@@ -1,12 +1,9 @@
-import Layout from '../app/layout';
-import UploadForm from '../components/UploadForm';
+import React from 'react';
+import UploadPage from '../components/UploadPage';
+import '../styles/globals.css';
 
-export default function Home() {
-  return (
-    <Layout>
-      <div className="form-container">
-        <UploadForm />
-      </div>
-    </Layout>
-  );
-}
+const Home = () => {
+    return <UploadPage />;
+};
+
+export default Home;
