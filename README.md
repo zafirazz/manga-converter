@@ -2,7 +2,7 @@
 
 The Manga to eBook Converter is a web-based application designed to streamline the process of converting manga images (JPG/PNG) into eBook formats (PDF) compatible with eReaders such as Kindle, PocketBook, Kobo and etc. This project addresses the common inconvenience of reading manga on mobile devices and the limitations of free online converters.
 
-![manga1](https://github.com/user-attachments/assets/214de525-32d7-4acf-adf8-b7a57c0b68d0)
+![image](https://github.com/user-attachments/assets/2ea34027-3271-4b6e-a61f-0b212f47f5e3)
 
 
 The backend of the project is built using Python and Flask, responsible for handling file uploads, processing images, and generating PDF files. And frontend was built with Next.js, HTML/CSS, JavaScript.
