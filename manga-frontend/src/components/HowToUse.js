@@ -6,7 +6,12 @@ const HowToUse = () => {
     return (
         <Layout>
             <h1>How to use</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis expedita laborum nisi beatae. Facilis aspernatur inventore corporis perspiciatis alias eaque dignissimos consectetur assumenda animi, consequuntur tenetur, ipsam nesciunt mollitia eum.</p>
+            <p>
+                In order to install the manga chapters on your e-book, firstly download the zip file that contains folders with manga images.
+                After go to "Upload File" page, choose the Zip file and upload it. As soon as you will click upload it will automatically
+                download the zip file with all the chapters as pdf files without loosing quality. Then you can share the file with your e-book.
+            </p>
+            <br/>Enjoy the fascinating world of mangas with us!
         </Layout>
     );
 };

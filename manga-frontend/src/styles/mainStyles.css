@@ -8,14 +8,14 @@ body {
     font-family: 'Poppins', sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
     background-image: url('../app/BGImage.jpg');
     background-size: cover;
     background-position: center;
-    padding-top: 100px; /* To make room for the fixed header */
-    padding-inline: 10px; /* Add left and right padding to create the margin */
+    padding-top: 100px;
+    padding-inline: 10px;
 }
 
 
@@ -54,6 +54,10 @@ body::before {
     font-weight: 600;
 }
 
+.logo a:visited {
+    color: white;
+}
+
 .nav-menu {
     display: flex;
     gap: 20px;
@@ -76,11 +80,13 @@ body::before {
     padding: 20px;
     border-radius: 10px;
     width: 100%;
-    max-width: calc(100% - 140px); /* Account for the left and right margins */
-    margin: 20px 0;
+    max-width: 800px;
+    margin: 20px auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    text-align: center;
 }
 
 .upload-button {
@@ -108,10 +114,10 @@ body::before {
     height: 100px;
     background-color: black;
     color: white;
-    width: 100vw; /* Full width of the viewport */
+    width: 100vw;
     padding: 0 70px;
-    margin-left: calc(-1 * 70px); /* Negative margin to offset the body padding */
-    margin-right: calc(-1 * 70px); /* Negative margin to offset the body padding */
+    margin-left: calc(-1 * 70px);
+    margin-right: calc(-1 * 70px);
 }
 
 
@@ -121,7 +127,6 @@ body::before {
 
 .footer-authors {
     display: flex;
-    align-items: center;
     justify-content: center;
     gap: 10px;
     margin-bottom: 10px;
@@ -145,32 +150,27 @@ body::before {
 
     .header-container,
     .footer-container {
-        padding: 0 40px; 
-        margin-left: calc(-1 * 40px); 
-        margin-right: calc(-1 * 40px); 
+        padding: 0 40px;
     }
 
     .upload-button {
-        padding: 12px 25px; /* Adjust button padding for tablets */
-        font-size: 16px; /* Adjust button font size for tablets */
+        padding: 12px 25px;
+        font-size: 16px;
     }
 }
 
-/* Media query for phones (screens less than 600px wide) */
 @media (max-width: 600px) {
     body {
-        padding-inline: 20px; /* Adjust the side padding for phones */
+        padding-inline: 20px;
     }
 
     .header-container,
     .footer-container {
-        padding: 0 20px; /* Adjust header and footer padding for phones */
-        margin-left: calc(-1 * 20px); /* Adjust negative margin for phones */
-        margin-right: calc(-1 * 20px); /* Adjust negative margin for phones */
+        padding: 0 20px;
     }
 
     .upload-button {
-        padding: 10px 20px; /* Adjust button padding for phones */
-        font-size: 14px; /* Adjust button font size for phones */
+        padding: 10px 20px;
+        font-size: 14px;
     }
 }

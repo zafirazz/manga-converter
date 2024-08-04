@@ -16,7 +16,9 @@ const Layout = ({ children }) => {
                 <title>MangaZip | {pathname === '/' ? 'Upload' : pathname.replace('/', '')}</title>
             </Head>
             <header className="header-container">
-                <div className="logo">MANGAzip</div>
+                <div className="logo">
+                    <Link href="/mainpage" className={pathname === '/mainpage' ? 'nav-link-current':'nav-link'}>MANGAzip</Link>
+                </div>
                 <nav className="nav-menu">
                     <Link href="/" className={pathname === '/' ? 'nav-link current' : 'nav-link'}>Upload File</Link>
                     <Link href="/howtouse" className={pathname === '/howtouse' ? 'nav-link current' : 'nav-link'}>How To Use</Link>
@@ -30,12 +32,12 @@ const Layout = ({ children }) => {
                     <div className="footer-authors">
                         <br />
                         <div>
-                            <img src="/github-logo.png" alt="GitHub" className="github-icon" />
-                            <a href="https://github.com/zafirazz" className="github-link">Zafira's GitHub</a>
+                            <img src="/github-logo.png" alt="GitHub: " className="github-icon" />
+                            <a href="https://github.com/zafirazz" className="github-link">Zafira</a>
                         </div>
                         <div>
-                            <img src="/github-logo.png" alt="GitHub" className="github-icon" />
-                            <a href="https://github.com/abhijeetsharma200" className="github-link">Abhijeet's GitHub</a>
+                            <img src="/github-logo.png" alt="GitHub: " className="github-icon" />
+                            <a href="https://github.com/abhijeetsharma200" className="github-link">Abhijeet</a>
                         </div>
                     </div>
                     <p>© 2024 MANGAzip</p>
