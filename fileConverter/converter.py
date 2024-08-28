@@ -1,6 +1,5 @@
 import os
 import zipfile
-
 from PIL import Image
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
@@ -43,7 +42,7 @@ def convert_images_to_pdf(input_folder):
             c.save()
             print(f"PDF created successfully at {output_pdf_path}")
 
-        zip_output_path = os.path.join(input_folder, 'result_folder.zip')
+        zip_output_path = os.path.join(result_folder, 'result_folder.zip')
         with zipfile.ZipFile(zip_output_path, 'w', zipfile.ZIP_DEFLATED) as zf:
             for dirname, subdirs, files in os.walk(result_folder):
                 for filename in files:
@@ -53,6 +52,4 @@ def convert_images_to_pdf(input_folder):
         print(f"Result folder zipped successfully at {zip_output_path}")
 
     except FileNotFoundError as ex:
-            print(ex)
-
-convert_images_to_pdf('/home/marbelle/manga-converter/static/files')
+        print(ex)
